@@ -1,1 +1,147 @@
 @import "normalize.css";
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(/public/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('/public/fonts/Roboto-Regular.ttf');
+}
+
+body{
+    background-color: #36395b;
+    color: #ffffff;
+    font: 1.2rem Roboto-Regular;
+}
+
+.app{
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    
+    &-header{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        margin: 3rem 0;
+
+        &-title{
+            font: 2rem Roboto-Bold;
+        }
+
+        &-mode{
+            margin: 0.5rem 0;
+            img{
+                width: 20%;
+            }
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 30px;
+                height: 17px;
+              }
+              
+              .switch input {display:none;}
+              
+              .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+              }
+              
+              .slider:before {
+                position: absolute;
+                content: "";
+                height: 13px;
+                width: 13px;
+                left: 2px;
+                bottom: 2px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+              }
+              
+              input:checked + .slider {
+                background-color: #8808ea;
+              }
+              
+              input:focus + .slider {
+                box-shadow: 0 0 1px #8808ea;
+              }
+              
+              input:checked + .slider:before {
+                -webkit-transform: translateX(13px);
+                -ms-transform: translateX(13px);
+                transform: translateX(13px);
+              }
+              
+              /* Rounded sliders */
+              .slider.round {
+                border-radius: 34px;
+              }
+              
+              .slider.round:before {
+                border-radius: 50%;
+              }
+        }
+    }
+
+    &-content{
+        margin: 3rem 0;
+        &-questions{
+            &-number{
+                margin: 1rem auto;
+                font-size: 1rem;
+                color: #ccc;
+            }
+
+            &-question{
+                font: 2rem Roboto-Bold;
+            }
+        }
+    }
+
+    &-answers{
+        margin: 3rem auto;
+        width: 80%;
+
+        &-answer{
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 10px;
+            background-color: #434772;
+
+            &:hover{
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+
+        }
+    }
+
+    button{
+        margin: 1rem auto;
+        background-color: #752ed7;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        padding: 18px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font: 2rem Roboto-Bold;
+
+        &:hover{
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    }
+}

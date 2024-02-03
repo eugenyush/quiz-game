@@ -6,7 +6,32 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="app">
+      <div class="app-header">
+        <div class="app-header-title">Quiz app</div>
+        <div class="app-header-mode">
+          <img src="public/favicon/sun.png" alt="">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <img src="public/favicon/moon.png" alt="">
+        </div>
+      </div>
+      <div class="app-content">
+        <div class="app-content-questions">
+          <div class="app-content-questions-number">Question 6 of 10</div>
+          <div class="app-content-questions-question">This app will test your skills (as well as your knowledge!) as you build out a fully functional quiz. </div>
+        </div>
+      </div>
+      <div class="app-answers">
+        <div class="app-answers-answer">1.Question</div>
+        <div class="app-answers-answer">2.Question</div>
+        <div class="app-answers-answer">3.Question</div>
+        <div class="app-answers-answer">4.Question</div>
+      </div>
+        <button>Submit answer</button>
+    </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
