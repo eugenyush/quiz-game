@@ -5,33 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body>
+  <body class="dark-theme">
     <div id="app" class="app">
       <div class="app-header">
         <div class="app-header-title">Quiz app</div>
         <div class="app-header-mode">
           <img src="public/favicon/sun.png" alt="">
           <label class="switch">
-            <input type="checkbox">
+            <input type="checkbox" id="themeSwitch" checked>
             <span class="slider round"></span>
           </label>
           <img src="public/favicon/moon.png" alt="">
         </div>
       </div>
-      <div class="app-content">
+      <div class="app-content" id="app-content">
         <div class="app-content-questions">
           <div class="app-content-questions-number" id="score">Question 6 of 10</div>
           <div class="app-content-questions-question" id="question">This app will test your skills (as well as your knowledge!) as you build out a fully functional quiz. </div>
         </div>
       </div>
-      <div class="app-answers">
+      <div class="app-answers" id="app-answers">
         <div class="app-answers-answer active" id="answer">1.Question</div>
         <div class="app-answers-answer" id="answer">2.Question</div>
         <div class="app-answers-answer" id="answer">3.Question</div>
         <div class="app-answers-answer" id="answer">4.Question</div>
       </div>
-        <button id="btn-submit" class="btn-submit">Submit answer</button>
-        <button id="btn-start" class="btn-start">Start Quiz</button>
+      <div class="app-start" id="app-start">Hello,World! It's Quiz game for start click a button "Start Quiz"</div>
+      <button id="btn-submit" class="btn-submit">Submit answer</button>
+      <button id="btn-start" class="btn-start">Start Quiz</button>
+      <p class="error-massg">Please select an answer before submitting.</p>
     </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
